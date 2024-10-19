@@ -7,7 +7,7 @@ const Sidebar = () => {
   //early return
   if (!isMenuOpen) return null;
   return (
-    <div className=" w-52 fixed bg-white mt-16 h-full text-center">
+    <div className=" w-52 fixed bg-white mt-[52px] h-full text-center">
       <h1 className="font-semibold pt-2 pl-2">Subscriptions</h1>
       <ul className="p-2">
         <li className="hover:bg-gray-200 rounded-md p-1">

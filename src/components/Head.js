@@ -38,7 +38,7 @@ const Head = () => {
         [searchQuery]: json[1],
       })
     );
-    console.log(json[1]);
+    // console.log(json[1]);
   };
   const toggleNavHandler = () => {
     dispatch(toggleNav());
