@@ -19,7 +19,7 @@ const ButtonList = () => {
     "Ghazal",
   ];
   return (
-    <div className="flex fixed bg-white">
+    <div className="flex fixed bg-white ">
       {buttonList.map((str, index) => (
         <Button key={index} name={str}></Button>
       ))}

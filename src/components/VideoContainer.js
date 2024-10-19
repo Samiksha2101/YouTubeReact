@@ -6,9 +6,11 @@ import { useSelector } from "react-redux";
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
+
   useEffect(() => {
     getVideos();
   }, []);
+
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEO_API);
     const info = await data.json();

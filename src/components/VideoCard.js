@@ -1,11 +1,11 @@
 // import React, { useEffect, useState } from "react";
-const VideoCard = ({ info, ad }) => {
+const VideoCard = ({ info, ad, vref }) => {
   const { snippet, statistics } = info;
   const { thumbnails } = snippet;
   //   console.log(info);
 
   return (
-    <div className="mx-2 my-5 cursor-pointer">
+    <div className="mx-2 my-5 cursor-pointer" ref={vref}>
       <img
         className="rounded-lg"
         src={thumbnails.medium.url}
