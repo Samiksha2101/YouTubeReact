@@ -22,15 +22,15 @@ const LiveChat = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full">
       <span className="font-bold ml-9">Live Chat</span>
-      <div className="overflow-y-scroll h-[450px] flex flex-col-reverse ml-9">
+      <div className="overflow-y-scroll h-[450px] flex flex-col-reverse ml-9 mr-4 ">
         {chats &&
           chats.map((c, i) => {
             console.log(c);
             return (
               <ChatMessage
-                //   key={i}
+                key={i}
                 name={c.name}
                 message={c.message}
               ></ChatMessage>
@@ -38,6 +38,7 @@ const LiveChat = () => {
           })}
       </div>
       <form
+        className="flex justify-end m-3 items-center"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(
@@ -51,11 +52,11 @@ const LiveChat = () => {
       >
         <input
           type="text"
-          className="px-2 w-9 border border-black w-80 ml-9 mt-1 rounded-md"
+          className="px-2 w-80  h-6 border border-black ml-9 rounded-md "
           value={livemsg}
           onChange={(e) => setLiveMsg(e.target.value)}
         ></input>
-        <button className="bg-green-100 p-2 ml-2">Send</button>
+        <button className="bg-green-100 p-2 ml-2 rounded-md">Send</button>
       </form>
     </div>
   );

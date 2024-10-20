@@ -19,22 +19,12 @@ const comments = [
             replies: [
               {
                 name: "Samiksha",
-                text: "This is my comment",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
                 replies: [
                   {
                     name: "Samiksha",
                     text: "This is my comment",
                     replies: [
-                      {
-                        name: "Samiksha",
-                        text: "This is my comment",
-                        replies: [],
-                      },
-                      {
-                        name: "Samiksha",
-                        text: "This is my comment",
-                        replies: [],
-                      },
                       {
                         name: "Samiksha",
                         text: "This is my comment",
@@ -46,7 +36,7 @@ const comments = [
               },
               {
                 name: "Samiksha",
-                text: "This is my comment",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 😊",
                 replies: [],
               },
               {
@@ -99,7 +89,7 @@ const CommentList = ({ comments }) => {
   return comments.map((comment, index) => (
     <div>
       <Comment data={comment}></Comment>
-      <div className="ml-4  border-l">
+      <div className="ml-7  border-l">
         <CommentList comments={comment.replies}></CommentList>
       </div>
     </div>
@@ -107,7 +97,7 @@ const CommentList = ({ comments }) => {
 };
 const CommentsContainer = () => {
   return (
-    <div className="ml-4">
+    <div className="ml-4 w-[840px]">
       <p className="font-bold">Comments</p>
       <CommentList comments={comments}></CommentList>
     </div>
